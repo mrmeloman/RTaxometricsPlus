@@ -40,10 +40,10 @@ function(parameters) {
     cat("  subsamples: ", parameters$windows, "windows that overlap", 
         parameters$overlap, "\n")
     if (parameters$assign.MAXEIG == 1) {
-      ind.label <- "input = one variable, output = all other variables"
+      ind.label <- "all possible input-output-output triplets"
     }
     if (parameters$assign.MAXEIG == 2) {
-      ind.label <- "all possible input-output-output triplets"
+      ind.label <- "input = one variable, output = all other variables"
     }
     if (parameters$assign.MAXEIG == 3) {
       ind.label <- "output = two variables, input = sum of remaining variables"
