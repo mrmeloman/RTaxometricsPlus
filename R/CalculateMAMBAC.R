@@ -14,8 +14,8 @@ function(input, output, parameters) {
   n <- length(input)
   x <- cbind(input, output)
   x <- x[sort.list(x[, 1]), ]
-  cuts <- seq(from = parameters$n.end, to = (n - parameters$n.end), 
-              length = parameters$n.cuts)
+  cuts <- round(seq(from = parameters$n.end, to = (n - 
+                parameters$n.end), length = parameters$n.cuts))
   curve <- rep(0, parameters$n.cuts)
   for (i in 1:parameters$reps) {
     if (i > 1) {
