@@ -12,7 +12,7 @@ data sets whose parameters are known.
 }
 \usage{
 CreateData(str, n = 600, k = 4, p = 0.5, d = 2, r = 0, r.tax = 0, r.comp = 0, 
-skew = 0, cuts = 0, seed = 1)
+g = 0, h = 0, cuts = 0, uniform = F, seed = 1)
 }
 \arguments{
   \item{str}{
@@ -40,12 +40,24 @@ Correlation among variables within the taxon. The default value is 0.
   \item{r.comp}{
 Correlation among variables within the complement. The default value is 0.
 }
-  \item{skew}{
-Amount of skew to be applied to variables. The default value is 0.
+  \item{g}{
+Parameter used to control asymmetry (scalar); sign indicates direction 
+and absolute value indicates magnitude of skew (e.g., +/- .30 yields 
+substantial asymmetry).
+}
+  \item{h}{
+Parameter used to control tail weight (scalar); positive values yield 
+tails that are longer/thinner than a standard normal curve, negative 
+values do the reverse (e.g., +/- .15 is a substantial departure 
+from normality).
 }
   \item{cuts}{
-Number of values to use when generating ordered categorical data. The 
-default value is 0.
+Parameter used to create ordered categorieas, if nonzero (scalar); 
+number of categories will be cuts + 1.
+}
+  \item{uniform}{
+Whether to generate random values (the program default) or use 
+uniformly distributed quantiles (T/F).
 }
   \item{seed}{
 Random number seed; specifying the same seed enables users to generate and

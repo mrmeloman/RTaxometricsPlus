@@ -1,6 +1,7 @@
 importFrom("grDevices", "dev.new")
 importFrom("graphics", "abline", "lines", "par", "plot", "points", "polygon")
 importFrom("stats", "cor", "density", "lm", "lowess", "median", "optimize", "rnorm", "smooth", "var")
+importFrom("stats", "qnorm")
 export(AddVariance)
 export(AssignMAMBAC)
 export(AssignMAXEIG)

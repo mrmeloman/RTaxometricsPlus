@@ -1,6 +1,6 @@
-f0ee87a02599fbfac60f67e7779ed604 *DESCRIPTION
+5a61f399d8315441d3eb5fcc8e2bf758 *DESCRIPTION
 b544aac1e0580ffb36796c359c6a4c68 *LICENSE
-b15872b7439e80ffe36c7071147e3e1d *NAMESPACE
+38b377d8d50767f1f91fff3dcfb37477 *NAMESPACE
 28c7c56ae05b0c2c0fd62f8731a0d6b5 *R/AddVariance.R
 a0114bfc0503c931108fdbddf071ace7 *R/AssignMAMBAC.R
 52d0f7826bf32afe6d2439887c63aa39 *R/AssignMAXEIG.R
@@ -18,7 +18,9 @@ e8331fa928e1b52a5f539a4b116bcfef *R/CalculateValidity.R
 a04715d1a9c7ef1f112b4ce4da6ed646 *R/CheckData.R
 a513125bfbaccb60bd3c9785e9b3d541 *R/CheckParameters.R
 456a83e2f9b212ff4954f4a79d261d46 *R/ClassifyCases.R
-e5c237709e1b07879080c200a49884df *R/CreateData.R
+abf8e34a390eddb515d210398b97903f *R/CreateData.R
+60f66cf2ac7da80eac76cb051617a305 *R/CreateSample.R
+3d2016d48ae2eb00cd43672eacad00a9 *R/CreateVariable.R
 097d071dc9eb1633e7d97ab4eae63aa0 *R/DisplayBaseRates.R
 6bffac7ff2f8450cb0a218020576a3e6 *R/DisplayCCFIs.R
 25bd55843a363c5fc1d263706ade89d6 *R/DisplayPanels.R
@@ -60,7 +62,9 @@ b683ade4b29c1f2fef0c05b51472fcf3 *man/CalculateValidity.Rd
 22c7a5477965b80a42d159df54274fb0 *man/CheckData.Rd
 feecf7de7c07c73c21f512d994e4a440 *man/CheckParameters.Rd
 9d9a94c19cdcbc68aaba6c7355cd958b *man/ClassifyCases.Rd
-fff3714399f0a6d45b98305912797498 *man/CreateData.Rd
+5b493c165cb2376b2ac1a6a1671d0775 *man/CreateData.Rd
+4c6f869270e5ce07998317289fe349ce *man/CreateSample.Rd
+a9e24a22894342b7723d55b6bcc7daae *man/CreateVariable.Rd
 48a1c283b45231b11fdd52e6cff33ca8 *man/DisplayBaseRates.Rd
 48f0913188d6240ecfafa92cacd8540a *man/DisplayCCFIs.Rd
 9a4cf6cc6fd9fcf74360f7dcf94a2002 *man/DisplayPanels.Rd
