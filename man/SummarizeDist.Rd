@@ -23,6 +23,6 @@ function directly.
 The sample mean, standard deviation, skewness, and kurtosis of x.
 }
 \author{
-John Ruscio <ruscio@tcnj.edu> and Shirley Wang <wangs7@tcnj.edu>
+John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>
 Maintainer: John Ruscio <ruscio@tcnj.edu>
 }

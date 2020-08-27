@@ -1,4 +1,4 @@
-importFrom("grDevices", "dev.new")
+importFrom("grDevices", "dev.new", "dev.off", "jpeg", "tiff")
 importFrom("graphics", "abline", "lines", "par", "plot", "points", "polygon")
 importFrom("stats", "cor", "density", "lm", "lowess", "median", "optimize", "rnorm", "smooth", "var")
 importFrom("stats", "qnorm")

@@ -10,7 +10,17 @@ function(CCFIs, parameters) {
   # Returns:
   #   Nothing; graphical output.
   #
-  dev.new(height = 4.5, width = 6)
+  if (parameters$graph == 1) {
+    dev.new(height = 4.5, width = 6)
+  }
+  if (parameters$graph == 2) {
+  	jpeg(paste("RunCCFIProfile ", date(), ".jpeg", sep = ""), units = "in", 
+  	     height = 4.5, width = 6, res = 500, quality = 50)
+  }
+  if (parameters$graph == 3) {
+  	tiff(paste("RunCCFIProfile ", date(), ".tiff", sep = ""), units = "in", 
+  	     height = 4.5, width = 6, res = 500)
+  }
   xs <- seq(parameters$min.p, parameters$max.p, length = parameters$num.p)
   plot(x = xs, CCFIs[5, ], ylim = c(0, 1), type = "p", pch = 20, 
        main = "CCFI Profiles", xlab = "Taxon Base Rate", ylab = "CCFI", 
@@ -32,5 +42,13 @@ function(CCFIs, parameters) {
   if (parameters$MAXSLOPE) {
     points(xs, CCFIs[4, ], pch = 83, cex = .5)
     lines(xs, CCFIs[4, ], lty = 5)
+  }
+  if (parameters$graph == 2) {
+    cat("\nSaving graph to .jpeg file\n")
+    dev.off()
+  }
+  if (parameters$graph == 3) {
+    cat("\nSaving graph to .tiff file\n")
+    dev.off()
   }
 }

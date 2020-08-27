@@ -8,7 +8,7 @@ function(CCFIs, parameters) {
   #   parameters: Data and program parameters (list).
   #
   # Returns:
-  #   Nothing; text output.
+  #   Aggregated CCFI values.
   #
   CCFI.aggregates <- rep(0, 5)
   p.ests <- rep(0, 5)
@@ -54,4 +54,9 @@ function(CCFIs, parameters) {
   cat("  Note: There is no evidence-based way to use base rate estimates to", 
       "\n        differentiate categorical and dimensional data. They should", 
       "\n        only be used if evidence supports categorical structure.\n")
+  
+  aggCCFI <- data.frame(t(round(CCFI.aggregates, 3)))
+  colnames(aggCCFI) <- c("aggCCFI_MAMBAC", "aggCCFI_MAXEIG", "aggCCFI_LMode", "aggCCFI_MAXSLOPE", "aggCCFI_Mean")
+  
+  return(aggCCFI)
 }

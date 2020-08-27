@@ -36,6 +36,6 @@ List of factor loadings and number of factors
 \item{factors }{The number of factors}
 }
 \author{
-John Ruscio <ruscio@tcnj.edu> and Shirley Wang <wangs7@tcnj.edu>
+John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>
 Maintainer: John Ruscio <ruscio@tcnj.edu>
 }

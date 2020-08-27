@@ -28,6 +28,6 @@ Grove, W.M., & Meehl, P.E. (1993). Simple regression-based procedures for
 taxometric investigations. Psychological Reports, 73, 707-737.
 }
 \author{
-John Ruscio <ruscio@tcnj.edu> and Shirley Wang <wangs7@tcnj.edu>
+John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>
 Maintainer: John Ruscio <ruscio@tcnj.edu>
 }

@@ -37,6 +37,6 @@ function directly.
 CCFI value
 }
 \author{
-John Ruscio <ruscio@tcnj.edu> and Shirley Wang <wangs7@tcnj.edu>
+John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>
 Maintainer: John Ruscio <ruscio@tcnj.edu>
 }

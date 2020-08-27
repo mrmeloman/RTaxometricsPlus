@@ -31,6 +31,6 @@ List of base rate estimates:
 \item{p.estimate}{mean}
 }
 \author{
-John Ruscio <ruscio@tcnj.edu> and Shirley Wang <wangs7@tcnj.edu>
+John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>
 Maintainer: John Ruscio <ruscio@tcnj.edu>
 }

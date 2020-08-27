@@ -30,6 +30,6 @@ taxonomy with two quantitative indicators using means above and below a
 sliding cut (MAMBAC procedure). Psychological Reports, 74(3, Pt 2), 1059-1274.
 }
 \author{
-John Ruscio <ruscio@tcnj.edu> and Shirley Wang <wangs7@tcnj.edu>
+John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>
 Maintainer: John Ruscio <ruscio@tcnj.edu>
 }

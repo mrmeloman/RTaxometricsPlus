@@ -13,7 +13,7 @@ RunCCFIProfile(x, seed = 1, min.p = 0.025, max.p = 0.975, num.p = 39,
 n.pop = 1e+05, n.samples = 100, reps = 1, MAMBAC = TRUE, assign.MAMBAC = 1, 
 n.cuts = 50, n.end = 25, MAXEIG = TRUE, assign.MAXEIG = 1, windows = 50, 
 overlap = 0.9, LMode = TRUE, mode.l = -0.001, mode.r = 0.001, MAXSLOPE = FALSE, 
-profile = TRUE)
+graph = 1, text.file = FALSE, profile = TRUE)
 }
 \arguments{
   \item{x}{
@@ -99,6 +99,14 @@ L-Mode procedure. The default value is .001.
 Whether the MAXSLOPE procedure is performed. The default value is FALSE
 if k >= 3, and TRUE if k < 3.
 }
+  \item{graph}{
+Whether to display graphs on screen (1), save as a compressed .jpeg file (2), 
+or save as a high-resolution .tiff file (3). The default value is 1.
+}
+  \item{text.file}{
+Whether to divert text output to a .txt file (T/F). 
+The default value is FALSE. 
+}
   \item{profile}{
 Whether a CCFI profile is generated. The default value is TRUE.
 }
@@ -108,13 +116,11 @@ This function should be called directly by users who wish to perform
 taxometric analyses to generate a CCFI profile.
 }
 \value{
-This program returns nothing, and provides text and graphical output only.
-}
-\references{
-John Ruscio <ruscio@tcnj.edu> and Shirley Wang <wangs7@tcnj.edu>
-Maintainer: John Ruscio <ruscio@tcnj.edu>
+This program returns CCFI values, and provides text and graphical output.
+Note that any CCFI values of 0 represent missing values, as analyses 
+will never yield a CCFI of 0. 
 }
 \author{
-John Ruscio <ruscio@tcnj.edu> and Shirley Wang <wangs7@tcnj.edu>
+John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>
 Maintainer: John Ruscio <ruscio@tcnj.edu>
 }

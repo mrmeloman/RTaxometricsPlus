@@ -35,6 +35,6 @@ Ruscio, J. (2009). Assigning cases to groups using taxometric results: an
 empirical comparison of classification techniques. Assessment, 16(1), 55-70.
 }
 \author{
-John Ruscio <ruscio@tcnj.edu> and Shirley Wang <wangs7@tcnj.edu>
+John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>
 Maintainer: John Ruscio <ruscio@tcnj.edu>
 }

@@ -3,7 +3,7 @@ function(x, seed = 1, min.p = .025, max.p = .975, num.p = 39,
   n.pop = 100000, n.samples = 100, reps = 1, MAMBAC = TRUE, assign.MAMBAC = 1, 
   n.cuts = 50, n.end = 25, MAXEIG = TRUE, assign.MAXEIG = 1, windows = 50, 
   overlap = .90, LMode = TRUE, mode.l = -.001, mode.r = .001, MAXSLOPE = FALSE, 
-  profile = TRUE) {
+  graph = 1, text.file = FALSE, profile = TRUE) {
   # 
   # Performs a series of taxometric analyses to generate a CCFI profile.
   # 
@@ -32,10 +32,14 @@ function(x, seed = 1, min.p = .025, max.p = .975, num.p = 39,
   #           mode.l: Position beyond which to search for left mode (scalar).
   #           mode.r: Position beyond which to search for right mode (scalar).
   #         MAXSLOPE: Whether MAXSLOPE is performed (T/F).
+  #            graph: Whether to display graphs on screen (1), save as a
+  #                   compressed .jpeg file (2), or save as a high-resolution
+  #                   .tiff file (3)
+  #        text.file: Whether to divert text output to a .txt file (T/F).
   #          profile: Whether CCFI profile is generated (T/F).
   # 
   # Returns:
-  #   Nothing; text and graphical output only.
+  #   Aggregated CCFI values.
   # 
   set.seed(seed)
   cat("\nSTATUS OF PROGRAM EXECUTION\n\n")
@@ -49,7 +53,8 @@ function(x, seed = 1, min.p = .025, max.p = .975, num.p = 39,
                      n.cuts = n.cuts, n.end = n.end, MAXEIG = MAXEIG, 
                      assign.MAXEIG = assign.MAXEIG, windows = windows, 
                      overlap = overlap, LMode = LMode, mode.l = mode.l, 
-                     mode.r = mode.r, MAXSLOPE = MAXSLOPE, profile = TRUE)
+                     mode.r = mode.r, MAXSLOPE = MAXSLOPE, graph = graph, 
+                     text.file = text.file, profile = TRUE)
   cat("Checking for variance\n")
   x <- AddVariance(x, k, parameters)
   x <- apply(x, 2, scale)
@@ -82,7 +87,28 @@ function(x, seed = 1, min.p = .025, max.p = .975, num.p = 39,
     CCFIs[, i] <- CalculateCCFIs(x.results, x.dim.results, x.cat.results,
                                  parameters)
   }
+  
+  if (parameters$text.file) {
+    cat("Printing results to .txt file\n\n")
+    sink(paste("RunCCFIProfile ", date(), ".txt", sep = ""))
+  }
+  
   DisplaySpecifications(parameters)
-  DisplayTextOutput(CCFIs, parameters)
-  DisplayProfiles(CCFIs, parameters)
+  textoutput <- DisplayTextOutput(CCFIs, parameters)
+  
+  if (!parameters$text.file) {
+    DisplayProfiles(CCFIs, parameters)
+  }
+  
+  if (parameters$text.file) {
+    sink()
+    if (parameters$graph == 2) {
+      DisplayProfiles(CCFIs, parameters)
+    }
+    if (parameters$graph == 3) {
+      DisplayProfiles(CCFIs, parameters)
+    }
+  }
+  
+  invisible(textoutput)
 }

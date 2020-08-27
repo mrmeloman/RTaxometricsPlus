@@ -11,7 +11,7 @@ analysis.
 DisplayBaseRates(x.results, parameters)
 }
 \arguments{
-  \item{x.results}{
+\item{x.results}{
 Empirical data results
 }
   \item{parameters}{
@@ -23,9 +23,9 @@ Called by higher-order functions; users do not need to call this
 function directly.
 }
 \value{
-This function returns nothing, and provides text output only
+This program returns nothing, and provides text output only.
 }
 \author{
-John Ruscio <ruscio@tcnj.edu> and Shirley Wang <wangs7@tcnj.edu>
+John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>
 Maintainer: John Ruscio <ruscio@tcnj.edu>
 }

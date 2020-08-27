@@ -8,7 +8,7 @@ function(x.results, parameters) {
   #   parameters: Data and program parameters (list).
   #
   # Returns:
-  #   Nothing; text output.
+  #   Nothing; text output only.
   #
   sum.p <- 0
   n.p <- 0

@@ -12,7 +12,17 @@ function(x.results, x.dim.results, x.cat.results, parameters) {
   # Returns:
   #   Nothing; graphical output.
   #
-  dev.new(height = 6, width = 4.5)
+  if (parameters$graph == 1) {
+    dev.new(height = 6, width = 4.5)
+  }
+  if (parameters$graph == 2) {
+  	jpeg(paste("RunTaxometrics ", date(), ".jpeg", sep = ""), units = "in", 
+  	     height = 6, width = 4.5, res = 500, quality = 50)
+  }
+  if (parameters$graph == 3) {
+  	tiff(paste("RunTaxometrics ", date(), ".tiff", sep = ""), units = "in", 
+  	     height = 6, width = 4.5, res = 500)
+  }
   par(mfrow = c(3, 2), omi = c(0, .2, .2, 0), mai = c(.7, .5, .25, .25))
   if (parameters$MAMBAC) {
     PlotPanel(x.results, x.dim.results, x.cat.results, parameters, 
@@ -29,5 +39,13 @@ function(x.results, x.dim.results, x.cat.results, parameters) {
   if (parameters$MAXSLOPE) {
     PlotPanel(x.results, x.dim.results, x.cat.results, parameters, 
               procedure = "MAXSLOPE")
+  }
+  if (parameters$graph == 2) {
+    cat("\nSaving graph to .jpeg file\n")
+  	dev.off()
+  }
+  if (parameters$graph == 3) {
+    cat("\nSaving graph to .tiff file\n")
+    dev.off()
   }
 }

@@ -28,9 +28,9 @@ Called by higher-order functions; users do not need to call this
 function directly.
 }
 \value{
-This function returns nothing, and provides text output only
+This function returns CCFIs, and provides text output 
 }
 \author{
-John Ruscio <ruscio@tcnj.edu> and Shirley Wang <wangs7@tcnj.edu>
+John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>
 Maintainer: John Ruscio <ruscio@tcnj.edu>
 }
