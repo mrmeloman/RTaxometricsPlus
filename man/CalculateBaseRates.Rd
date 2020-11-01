@@ -1,14 +1,14 @@
-\name{DisplayBaseRates}
-\alias{DisplayBaseRates}
+\name{CalculateBaseRates}
+\alias{CalculateBaseRates}
 \title{
-Displays base rates
+Calculates and returns base rate estimates for taxometric analysis
 }
 \description{
 This function calculates and reports base rate estimates for taxometric
 analysis.
 }
 \usage{
-DisplayBaseRates(x.results, parameters)
+CalculateBaseRates(x.results, parameters)
 }
 \arguments{
 \item{x.results}{

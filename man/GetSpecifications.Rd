@@ -1,19 +1,15 @@
-\name{DisplayTextOutput}
-\alias{DisplayTextOutput}
+\name{GetSpecifications}
+\alias{GetSpecifications}
 \title{
-Displays CCFI profile output
+Provides analytic specifications
 }
 \description{
-This function displays aggregated CCFIs and base rate estimates for
-CCFI profile
+This function provides analytic specifications
 }
 \usage{
-DisplayTextOutput(CCFIs, parameters)
+GetSpecifications(parameters)
 }
 \arguments{
-  \item{CCFIs}{
-CCFI values across base rates and procedures
-}
   \item{parameters}{
 The data and program parameters
 }
@@ -23,7 +19,7 @@ Called by higher-order functions; users do not need to call this
 function directly.
 }
 \value{
-This function returns aggregated CCFI values.
+This function returns nothing, and provides text output only
 }
 \author{
 John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>

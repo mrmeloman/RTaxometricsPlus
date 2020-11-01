@@ -2,7 +2,7 @@ RunTaxometrics <-
 function(x, seed = 1, n.pop = 100000, n.samples = 100, 
   reps = 1, MAMBAC = TRUE, assign.MAMBAC = 1, n.cuts = 50, n.end = 25, 
   MAXEIG = TRUE, assign.MAXEIG = 1, windows = 50, overlap = .90, LMode = TRUE, 
-  mode.l = -.001, mode.r = .001, MAXSLOPE = FALSE, graph = 1, text.file = FALSE) {
+  mode.l = -.001, mode.r = .001, MAXSLOPE = FALSE, graph = 1) {
   # 
   # Performs a series of taxometric analyses for a sample of data.
   # 
@@ -31,10 +31,9 @@ function(x, seed = 1, n.pop = 100000, n.samples = 100,
   #            graph: Whether to display graphs on screen (1), save as a
   #                   compressed .jpeg file (2), or save as a high-resolution
   #                   .tiff file (3)
-  #        text.file: Whether to divert text output to a .txt file (T/F).
   #
-  # Returns:
-  #   CCFI values.
+  # Returns a list object containing CCFI values, base rate estimates, and
+  #   analytic specifications.
   # 
   set.seed(seed)
   cat("\nSTATUS OF PROGRAM EXECUTION\n\n")
@@ -54,7 +53,7 @@ function(x, seed = 1, n.pop = 100000, n.samples = 100,
                      assign.MAXEIG = assign.MAXEIG, windows = windows, 
                      overlap = overlap, LMode = LMode, mode.l = mode.l, 
                      mode.r = mode.r, MAXSLOPE = MAXSLOPE, graph = graph,
-                     text.file = text.file, profile = FALSE)
+                     profile = FALSE)
   cat("Checking for variance\n")
   x <- AddVariance(x, k, parameters)
   x <- apply(x, 2, scale)
@@ -77,32 +76,11 @@ function(x, seed = 1, n.pop = 100000, n.samples = 100,
   x.dim.results <- RunProceduresComp(x.dim, parameters)
   cat("Analyzing samples of categorical comparison data\n")
   x.cat.results <- RunProceduresComp(x.cat, parameters)
-  
-  if (parameters$text.file) {
-    cat("Printing results to .txt file")
-    sink(paste("RunTaxometrics ", date(), ".txt", sep = ""))
-  }
-  
-  DisplaySpecifications(parameters)
-  
-  CCFI <- DisplayCCFIs(x.results, x.dim.results, x.cat.results, parameters)
-  DisplayBaseRates(x.results, parameters)
-  
-  if (!parameters$text.file){
-    DisplayPanels(x.results, x.dim.results, x.cat.results, parameters)
-  }
-  
-  if (parameters$text.file) {
-    sink()
-    if (parameters$graph == 2) {
-      DisplayPanels(x.results, x.dim.results, x.cat.results, parameters)
-    }
-    if (parameters$graph == 3) {
-      DisplayPanels(x.results, x.dim.results, x.cat.results, parameters)
-    }
-  }
-  
-  invisible(CCFI)
-  
-
+  cat("Plotting graphs\n")
+  DisplayPanels(x.results, x.dim.results, x.cat.results, parameters)
+  cat("Returning results\n\n")
+  output.1 <- CalculateCCFIs(x.results, x.dim.results, x.cat.results, parameters)
+  output.2 <- CalculateBaseRates(x.results, parameters)
+  output.3 <- GetSpecifications(parameters)
+  return(c(output.1, output.2, output.3))
 }

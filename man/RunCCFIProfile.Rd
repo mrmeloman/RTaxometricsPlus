@@ -6,7 +6,8 @@ Performs taxometric analyses to generate a CCFI profile
 \description{
 This function performs a series of taxometric analysis using categorical 
 comparison data sets that vary in taxon base rates, and plots a profile of
-CCFI values across this range of base rates. 
+CCFI values across this range of base rates. Results can be assigned to an object 
+to store results; otherwise results will be displayed on-screen.
 }
 \usage{
 RunCCFIProfile(x, seed = 1, min.p = 0.025, max.p = 0.975, num.p = 39, 

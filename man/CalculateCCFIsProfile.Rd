@@ -1,13 +1,13 @@
-\name{DisplayCCFIs}
-\alias{DisplayCCFIs}
+\name{CalculateCCFIsProfile}
+\alias{CalculateCCFIsProfile}
 \title{
-Calculates and displays CCFIs 
+Calculates CCFIs for profiles
 }
 \description{
-This function calculates and reports CCFI results for taxometric analysis
+This function calculates CCFI results for CCFI profiles
 }
 \usage{
-DisplayCCFIs(x.results, x.dim.results, x.cat.results, parameters)
+CalculateCCFIsProfile(x.results, x.dim.results, x.cat.results, parameters)
 }
 \arguments{
   \item{x.results}{
@@ -28,7 +28,7 @@ Called by higher-order functions; users do not need to call this
 function directly.
 }
 \value{
-This function returns CCFIs, and provides text output 
+CCFI values
 }
 \author{
 John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>

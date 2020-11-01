@@ -38,8 +38,8 @@ function(x, seed = 1, min.p = .025, max.p = .975, num.p = 39,
   #        text.file: Whether to divert text output to a .txt file (T/F).
   #          profile: Whether CCFI profile is generated (T/F).
   # 
-  # Returns:
-  #   Aggregated CCFI values.
+  # Returns a list object containing CCFI values, base rate estimates, and
+  #   analytic specifications.
   # 
   set.seed(seed)
   cat("\nSTATUS OF PROGRAM EXECUTION\n\n")
@@ -54,7 +54,7 @@ function(x, seed = 1, min.p = .025, max.p = .975, num.p = 39,
                      assign.MAXEIG = assign.MAXEIG, windows = windows, 
                      overlap = overlap, LMode = LMode, mode.l = mode.l, 
                      mode.r = mode.r, MAXSLOPE = MAXSLOPE, graph = graph, 
-                     text.file = text.file, profile = TRUE)
+                     profile = TRUE)
   cat("Checking for variance\n")
   x <- AddVariance(x, k, parameters)
   x <- apply(x, 2, scale)
@@ -84,31 +84,13 @@ function(x, seed = 1, min.p = .025, max.p = .975, num.p = 39,
       n = parameters$n.pop - round(parameters$n.pop * ps[i]))
     x.cat <- rbind(x.cat.taxon, x.cat.complement)
     x.cat.results <- RunProceduresComp(x.cat, parameters)
-    CCFIs[, i] <- CalculateCCFIs(x.results, x.dim.results, x.cat.results,
-                                 parameters)
+    CCFIs[, i] <- CalculateCCFIsProfile(x.results, x.dim.results, 
+                                        x.cat.results, parameters)
   }
-  
-  if (parameters$text.file) {
-    cat("Printing results to .txt file\n\n")
-    sink(paste("RunCCFIProfile ", date(), ".txt", sep = ""))
-  }
-  
-  DisplaySpecifications(parameters)
-  textoutput <- DisplayTextOutput(CCFIs, parameters)
-  
-  if (!parameters$text.file) {
-    DisplayProfiles(CCFIs, parameters)
-  }
-  
-  if (parameters$text.file) {
-    sink()
-    if (parameters$graph == 2) {
-      DisplayProfiles(CCFIs, parameters)
-    }
-    if (parameters$graph == 3) {
-      DisplayProfiles(CCFIs, parameters)
-    }
-  }
-  
-  invisible(textoutput)
+  cat("Plotting graphs\n")
+  DisplayProfiles(CCFIs, parameters)
+  cat("Returning results\n\n")
+  output.1 <- CalculateProfileOutput(CCFIs, parameters)
+  output.2 <- GetSpecifications(parameters)
+  return(c(output.1, output.2))
 }

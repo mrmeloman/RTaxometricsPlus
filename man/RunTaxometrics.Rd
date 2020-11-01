@@ -9,12 +9,14 @@ specifications, CCFI values, base rate estimates) and graphical (panels of
 empirical data curves superimposed above comparison data curves) output. By
 default, the function will run MAMBAC, MAXEIG, and L-Mode, unless only 2 
 variables are provided, in which case the program will run MAMBAC and MAXSLOPE.
+Results can be assigned to an object to store results; otherwise results
+will be displayed on-screen.
 }
 \usage{
 RunTaxometrics(x, seed = 1, n.pop = 1e+05, n.samples = 100, reps = 1, 
 MAMBAC = TRUE, assign.MAMBAC = 1, n.cuts = 50, n.end = 25, MAXEIG =
 TRUE, assign.MAXEIG = 1, windows = 50, overlap = 0.9, LMode = TRUE, mode.l = 
--0.001, mode.r = 0.001, MAXSLOPE = FALSE, graph = 1, text.file = FALSE)
+-0.001, mode.r = 0.001, MAXSLOPE = FALSE, graph = 1)
 }
 \arguments{
   \item{x}{
@@ -95,10 +97,6 @@ if k >= 3, and TRUE if k < 3.
   \item{graph}{
 Whether to display graphs on screen (1), save as a compressed .jpeg file (2), 
 or save as a high-resolution .tiff file (3). The default value is 1.
-}
-  \item{text.file}{
-Whether to divert text output to a .txt file (T/F). 
-The default value is FALSE. 
 }
 }
 \details{
