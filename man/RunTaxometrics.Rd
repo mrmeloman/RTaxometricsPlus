@@ -13,7 +13,7 @@ Results can be assigned to an object to store results; otherwise results
 will be displayed on-screen.
 }
 \usage{
-RunTaxometrics(x, seed = 1, n.pop = 1e+05, n.samples = 100, reps = 1, 
+RunTaxometrics(x, seed = 0, n.pop = 1e+05, n.samples = 100, reps = 1, 
 MAMBAC = TRUE, assign.MAMBAC = 1, n.cuts = 50, n.end = 25, MAXEIG =
 TRUE, assign.MAXEIG = 1, windows = 50, overlap = 0.9, LMode = TRUE, mode.l = 
 -0.001, mode.r = 0.001, MAXSLOPE = FALSE, graph = 1)
@@ -25,7 +25,7 @@ analysis.
 }
   \item{seed}{
 Random number seed provided prior to analysis of empirical data as well as
-prior to generating each population of comparison data. The default value is 1.
+prior to generating each population of comparison data. The default value is 0.
 }
   \item{n.pop}{
 Size of the finite populations of categorical and dimensional comparison data.

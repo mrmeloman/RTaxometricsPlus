@@ -10,7 +10,7 @@ CCFI values across this range of base rates. Results can be assigned to an objec
 to store results; otherwise results will be displayed on-screen.
 }
 \usage{
-RunCCFIProfile(x, seed = 1, min.p = 0.025, max.p = 0.975, num.p = 39, 
+RunCCFIProfile(x, seed = 0, min.p = 0.025, max.p = 0.975, num.p = 39, 
 n.pop = 1e+05, n.samples = 100, reps = 1, MAMBAC = TRUE, assign.MAMBAC = 1, 
 n.cuts = 50, n.end = 25, MAXEIG = TRUE, assign.MAXEIG = 1, windows = 50, 
 overlap = 0.9, LMode = TRUE, mode.l = -0.001, mode.r = 0.001, MAXSLOPE = FALSE, 
@@ -22,7 +22,7 @@ Supplied data matrix. Cases missing any data will be removed prior to analysis.
 }
   \item{seed}{
 Random number seed provided prior to analysis of empirical data as well as
-prior to generating each population of comparison data. The default value is 1.
+prior to generating each population of comparison data. The default value is 0.
 }
   \item{min.p}{
 Minimum base rate for CCFI profile. The default value is .025.

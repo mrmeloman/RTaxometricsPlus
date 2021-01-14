@@ -71,6 +71,5 @@ function(parameters) {
     output <- c(output, LMode.search.left = parameters$mode.l,
                 LMode.search.right = parameters$mode.r)
   }
-  output <- output[2:length(output)]
   return(output)
 }

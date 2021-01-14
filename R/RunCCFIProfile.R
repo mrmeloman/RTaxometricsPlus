@@ -1,5 +1,5 @@
 RunCCFIProfile <-
-function(x, seed = 1, min.p = .025, max.p = .975, num.p = 39, 
+function(x, seed = 0, min.p = .025, max.p = .975, num.p = 39, 
   n.pop = 100000, n.samples = 100, reps = 1, MAMBAC = TRUE, assign.MAMBAC = 1, 
   n.cuts = 50, n.end = 25, MAXEIG = TRUE, assign.MAXEIG = 1, windows = 50, 
   overlap = .90, LMode = TRUE, mode.l = -.001, mode.r = .001, MAXSLOPE = FALSE, 
@@ -38,10 +38,12 @@ function(x, seed = 1, min.p = .025, max.p = .975, num.p = 39,
   #        text.file: Whether to divert text output to a .txt file (T/F).
   #          profile: Whether CCFI profile is generated (T/F).
   # 
-  # Returns a list object containing CCFI values, base rate estimates, and
-  #   analytic specifications.
+  # Returns a list object of class "profile" containing CCFI values, base rate 
+  #   estimates, and analytic specifications.
   # 
-  set.seed(seed)
+  if (seed != 0) {
+    set.seed(seed)
+  }
   cat("\nSTATUS OF PROGRAM EXECUTION\n\n")
   cat("Checking for missing data\n")
   x <- RemoveMissingData(x)
@@ -92,5 +94,7 @@ function(x, seed = 1, min.p = .025, max.p = .975, num.p = 39,
   cat("Returning results\n\n")
   output.1 <- CalculateProfileOutput(CCFIs, parameters)
   output.2 <- GetSpecifications(parameters)
-  return(c(output.1, output.2))
+  output <- c(output.1, output.2)
+  class(output) <- "profile"
+  return(output)
 }

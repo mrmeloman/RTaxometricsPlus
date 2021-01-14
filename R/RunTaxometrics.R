@@ -1,5 +1,5 @@
 RunTaxometrics <-
-function(x, seed = 1, n.pop = 100000, n.samples = 100, 
+function(x, seed = 0, n.pop = 100000, n.samples = 100, 
   reps = 1, MAMBAC = TRUE, assign.MAMBAC = 1, n.cuts = 50, n.end = 25, 
   MAXEIG = TRUE, assign.MAXEIG = 1, windows = 50, overlap = .90, LMode = TRUE, 
   mode.l = -.001, mode.r = .001, MAXSLOPE = FALSE, graph = 1) {
@@ -35,7 +35,9 @@ function(x, seed = 1, n.pop = 100000, n.samples = 100,
   # Returns a list object containing CCFI values, base rate estimates, and
   #   analytic specifications.
   # 
-  set.seed(seed)
+  if (seed != 0) {
+  	set.seed(seed)
+  }
   cat("\nSTATUS OF PROGRAM EXECUTION\n\n")
   cat("Checking for missing data\n")
   x <- RemoveMissingData(x)
@@ -82,5 +84,7 @@ function(x, seed = 1, n.pop = 100000, n.samples = 100,
   output.1 <- CalculateCCFIs(x.results, x.dim.results, x.cat.results, parameters)
   output.2 <- CalculateBaseRates(x.results, parameters)
   output.3 <- GetSpecifications(parameters)
-  return(c(output.1, output.2, output.3))
+  output <- c(output.1, output.2, output.3)
+  class(output) <- "taxometrics"
+  return(output)
 }

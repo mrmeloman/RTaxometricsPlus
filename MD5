@@ -1,6 +1,6 @@
-d8b404f33be71df25f51aef5f36785df *DESCRIPTION
-01e5fa6781b02b51ee1ba7218f5148be *LICENSE
-920104f99a955b7fd85642c8551f2891 *NAMESPACE
+8fd535c0a3134838c1fa05a1fbc3eb2a *DESCRIPTION
+2137ab0082fce666cdb7d6de6a379c70 *LICENSE
+a3dd2c09204ec8f6825b019cb5fd5eec *NAMESPACE
 28c7c56ae05b0c2c0fd62f8731a0d6b5 *R/AddVariance.R
 a0114bfc0503c931108fdbddf071ace7 *R/AssignMAMBAC.R
 52d0f7826bf32afe6d2439887c63aa39 *R/AssignMAXEIG.R
@@ -31,11 +31,11 @@ d19781174a94f29f9660e98335404038 *R/DisplayPanels.R
 6d75de9e028a524f1af08322abb8ba52 *R/EstimateMAXEIG.R
 08e95d2a4cb71350c3f149ec62b912f2 *R/EstimateMAXSLOPE.R
 82a3a7fb4d5ef6a00129cb355fe5e151 *R/GenerateData.R
-e0d20dd254d8de9c3c1b19738fe83db6 *R/GetSpecifications.R
+e74707933363ac31be74c4b07de4a192 *R/GetSpecifications.R
 2ab1b65d4bef90a21267cff72bf49957 *R/PlotPanel.R
 c3099c5b3f886ef1b0947465e7a1a3ea *R/ProcessProfile.R
-6cdf7dd927a0b0c4ee46444278f24079 *R/RemoveMissingData.R
-89c0cfc6bddc1073fb1e135062924b17 *R/RunCCFIProfile.R
+ef84f1f5d2ac7158c93f07ee841f0f27 *R/RemoveMissingData.R
+c1adafa72175ae567a14bdd009582882 *R/RunCCFIProfile.R
 382cfa553b92540ba437de544de448bb *R/RunFactorAnalysis.R
 313b340012857636bdbe5e716027e503 *R/RunLMode.R
 47de708b8f511ad9ec42d91d682654d1 *R/RunMAMBAC.R
@@ -43,8 +43,10 @@ c3195fd44f7b0e419cb44148c8100849 *R/RunMAXEIG.R
 1d6b3a27e73688906d72327cc861ce36 *R/RunMAXSLOPE.R
 686e7a93189ef80f055bf9bb317d39d7 *R/RunProcedures.R
 ed8c00d716a33e77dbfd6042bc6495c8 *R/RunProceduresComp.R
-b513916164b774b97219783bac6b706f *R/RunTaxometrics.R
+24ebdcb25db0c7a2916ac5e83e196ad8 *R/RunTaxometrics.R
 67a868872408f7f44886cd1719137085 *R/SummarizeDist.R
+8e836c79ddc2195d3d8c0fc1d4787e48 *R/print.profile.R
+c103308e6d558f8ccc2c773d23815907 *R/print.taxometrics.R
 9a58626a6d88fe1fbc91de3d43a20e64 *man/AddVariance.Rd
 2edd2d7c908a8d016e719bd06186fbb9 *man/AssignMAMBAC.Rd
 413d7f995f968fccd1f3d6fd096f4b16 *man/AssignMAXEIG.Rd
@@ -79,7 +81,7 @@ bb45fb0f75b041ebd8505a6324507dfa *man/DisplayProfiles.Rd
 95e023e778877646a96be3d01aee33ae *man/PlotPanel.Rd
 726999819d374d21d4d15d1ff07007d4 *man/ProcessProfile.Rd
 5a2385e3970cc8f790bb2c60c9463be8 *man/RemoveMissingData.Rd
-06956ca4b9a2a3bada4b160af931d847 *man/RunCCFIProfile.Rd
+b0b0806aaf1d7782e218ee026704d9b7 *man/RunCCFIProfile.Rd
 b2e4ca861eab762e761a1763d12a298b *man/RunFactorAnalysis.Rd
 f08d0e0b80bde7fbbea7d60e1e13ea41 *man/RunLMode.Rd
 175753f4d213f90ce4ead592aa62503e *man/RunMAMBAC.Rd
@@ -87,5 +89,5 @@ f08d0e0b80bde7fbbea7d60e1e13ea41 *man/RunLMode.Rd
 ba90b8f044d8b3201cdc00f9dbf77013 *man/RunMAXSLOPE.Rd
 0c753f53d77782134f02a0d1ffa403d1 *man/RunProcedures.Rd
 c49e18f21fede7b89eb0c7c355497e28 *man/RunProceduresComp.Rd
-786ab628dd3666c723a27bb8760ffdeb *man/RunTaxometrics.Rd
+2eef5afb5a9c63e883f447d1d88c9663 *man/RunTaxometrics.Rd
 c7dfd8b2af33efdd8ae6820d8766b22b *man/SummarizeDist.Rd
