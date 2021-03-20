@@ -1,3 +1,5 @@
+#' @export
+
 print.profile <-
 function(x) {
   # 

@@ -1,4 +1,4 @@
-8fd535c0a3134838c1fa05a1fbc3eb2a *DESCRIPTION
+6cb33ec0d466039da05de008088666e0 *DESCRIPTION
 2137ab0082fce666cdb7d6de6a379c70 *LICENSE
 a3dd2c09204ec8f6825b019cb5fd5eec *NAMESPACE
 28c7c56ae05b0c2c0fd62f8731a0d6b5 *R/AddVariance.R
@@ -45,8 +45,8 @@ c3195fd44f7b0e419cb44148c8100849 *R/RunMAXEIG.R
 ed8c00d716a33e77dbfd6042bc6495c8 *R/RunProceduresComp.R
 24ebdcb25db0c7a2916ac5e83e196ad8 *R/RunTaxometrics.R
 67a868872408f7f44886cd1719137085 *R/SummarizeDist.R
-8e836c79ddc2195d3d8c0fc1d4787e48 *R/print.profile.R
-c103308e6d558f8ccc2c773d23815907 *R/print.taxometrics.R
+63f2fafc0092cd96605c4a22e042d941 *R/print.profile.R
+ecc1bc872fabdc5d2dac95c5ad5de5f5 *R/print.taxometrics.R
 9a58626a6d88fe1fbc91de3d43a20e64 *man/AddVariance.Rd
 2edd2d7c908a8d016e719bd06186fbb9 *man/AssignMAMBAC.Rd
 413d7f995f968fccd1f3d6fd096f4b16 *man/AssignMAXEIG.Rd

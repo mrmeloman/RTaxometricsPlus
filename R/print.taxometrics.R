@@ -1,3 +1,5 @@
+#' @export
+
 print.taxometrics <-
 function(x) {
   # 
