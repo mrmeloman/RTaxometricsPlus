@@ -2,6 +2,8 @@ Package: RTaxometrics
 Type: Package
 Title: Taxometric Analysis
 Version: 3.2
+Imports:
+    ggplot2
 Date: 2021-3-20
 Author: John Ruscio <ruscio@tcnj.edu> and Shirley Wang <shirleywang@g.harvard.edu>
 Maintainer: John Ruscio <ruscio@tcnj.edu>
