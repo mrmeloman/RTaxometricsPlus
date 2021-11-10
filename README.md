@@ -1,0 +1,8 @@
+# RTaxometricsPlus
+This is a fork of Wang &amp; Ruscio's RTaxometric package. The goal of this fork is to have faster computing and better plots. 
+
+# How it's different from the original RTaxometrics?
+
+* DisplayProfile() uses ggplot2 instead of default R plot libraries, which results in prettier plots
+* DisplayProfile has an option to return ggplot2 object if ran separately
+* There is a ggplot2 dependency, obviously
